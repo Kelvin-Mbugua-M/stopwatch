@@ -4,6 +4,7 @@ let minutes = 0;
 let seconds = 0;
 let milliSeconds =0;
 let count = 0;
+let pause = true;
 function updateTimer(){
     if(minutes>=59){
         hour++;
@@ -22,12 +23,13 @@ function updateTimer(){
     
 }
 function startFunction(){
-    return count = 1;
+    return count = 1, pause = false;
     
 }
 function stopFunction(){
     updateTimer()
-    return count =0;
+    return count =0,pause = true;
+
 }
 function resetTimer(){
     hour =0
@@ -45,7 +47,7 @@ document.addEventListener('keypress',function(e){
         startFunction();
     }
     if(e.key===" "){
-        if(count===1){
+        if(pause===false){
             stopFunction();
         }
         else startFunction();
