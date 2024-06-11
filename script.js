@@ -39,16 +39,16 @@ function resetTimer(){
 }
 document.addEventListener('keypress',function(e){
     if(e.key==="r"){
-        resetTimer()
+        resetTimer();
     }
     if(e.key==="Enter"){
-        startFunction()
+        startFunction();
     }
     if(e.key===" "){
         if(count===1){
-            stopFunction()
+            stopFunction();
         }
-        else startFunction()
+        else startFunction();
     }
 });
 let callTimer = setInterval(updateTimer,100);
